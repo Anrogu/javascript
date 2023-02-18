@@ -33,7 +33,7 @@
                 <div data-aos="fade-in" class="img-container"></div>
                 <div class="texto">
         <h2 data-aos="fade-up"> ¡Hola! te explico un poco sobre mi <span class="color-acento">calculadora</span></h2>
-        <p data-aos="fade-in">mi calculadora funciona usando los bucles de <span class="color-acento">FOR</span> y <span class="color-acento">WHILE</span> ademas del uso de distintos operadores matematicos para realizar las operaciones correspondientes, pruebalo por ti mismo</p>
+        <p data-aos="fade-in">mi calculadora utiliza funciones como<span class="color-acento"> eventListener</span> y <span class="color-acento">getElementById</span> ademas del uso de distintos operadores matematicos para realizar las operaciones correspondientes, pruebalo por ti mismo</p>
             </div>
         </div>
     </section>
@@ -42,22 +42,41 @@
         <h2 data-aos="fade-up">¿Qué<span class="color-acento"> calculos</span> hace?</h2>
         <div class="programas">
             <div data-aos="fade-in" class="carta">
-                <dialog id="modal"><h2>calcula tu impuesto!</h2>
+                <dialog id="modal">
+                    <h2>calcula tu impuesto!</h2>
+                    <div class="container2">
+                        <input class="calc-container" id="calcimpu1" type="number">
+                    <h1>+</h1>
+                    <input class="calc-container" id="calcimpu2" type="number">
+                    <h1>%</h1>
+                    <h1>=</h1>
+                    <input class="resultado" id="resultado1" type="number">
+                </div>
                     <button id="calculoimpuesto">calcula.me</button>
                 <button id="cerrarmodal">cierrame</button>
             </dialog>
-                <h3 data-aos="fade-in">calculo de impuesto</h3>
-                <p data-aos="fade-in"> ¿necesitas calcular un impuesto? ¡te puedo ayudar! tanto si es de forma neta o de forma completa puedo ayudarte a calcular tus impuestos a pagar.</p><button id="impuesto"data-aos="fade-up">calcula.me</button>
+                <h3 data-aos="fade-in">Calculo de impuesto!</h3>
+               <button id="impuesto"data-aos="fade-up">calcula.me</button>
             </div>
         <div data-aos="fade-in" class="carta">
-            <dialog id="modal1"><h2>calcula tu descuento!</h2>
+            <dialog id="modal1">
+                <h2>calcula tu descuento!</h2>
+                <div class="container2">
+                    <input class="calc-container" id="calcdesc1" type="number">
+                <h1>-</h1>
+                <input class="calc-container" id="calcdesc2" type="number">
+                <h1>%</h1>
+                <h1>=</h1>
+                <input class="resultado" id="resultado2" type="number">
+            </div>
                 <button id="calculodescuento">calcula.me</button>
                 <button id="cerrarmodal1">cierrame</button>
+
             </dialog>
 
-            <h3 data-aos="fade-in">calculo de descuento</h3>
+            <h3 data-aos="fade-in">Calculo de descuento!</h3>
             <p data-aos="fade-in"> ¿quieres saber cuanto te costaria ese objeto tan deseado con ese dulce descuento? usa nuestra herramienta para arreglar sin problemas tus dificultades.</p>
-            <button id="descuento"data-aos="fade-up">calcula.me</button>
+            <button id="descuento">calcula.me</button>
         </div>
         </div>
     </div>

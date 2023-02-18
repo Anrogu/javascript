@@ -22,11 +22,6 @@ let calculoDescuento_Btn = document.getElementById("calculodescuento")
 calculoDescuento_Btn.addEventListener("click",() =>{
 descuento_neto();
 })
-bienvenida();
-function bienvenida(){
-
-	let seleccion = alert("bienvenido a calculadora de impuestos y descuentos!")
-}
 function impuesto_neto (){
 	let calculos = [
 		" una vez ocurrido el descuento su objeto cuesta ", "una vez añadido el impuesto su objeto cuesta ", "el impuesto neto a su objeto es " , "el descuento neto a su objeto es "
@@ -34,30 +29,20 @@ function impuesto_neto (){
   let datosImpuesto = {
     tipodeoperacionimpu1:"division",
     tipodeoperacionimpu2:"multiplicacion",
-    impuesto1 : parseInt(prompt("ingrese el impuesto a sumar")),
-    impuesto2: parseInt(prompt("ingrese el precio de su objeto")),
+    impuesto1 : parseInt(document.getElementById("calcimpu1").value),
+    impuesto2: parseInt(document.getElementById("calcimpu2").value),
   }
   let operacionesimpuesto = [
-    impuestoR1 = datosImpuesto.impuesto1 / 100,
-    impuestoR2 = datosImpuesto.impuesto2 * impuestoR1,
-    impuestoR3 = datosImpuesto.impuesto2 + impuestoR2,
+	impuestoR1 = datosImpuesto.impuesto1 / 100,
+	impuestoR2 = datosImpuesto.impuesto2 * impuestoR1,
+  	impuestoR3 = datosImpuesto.impuesto1 + impuestoR2
     ];
-	let impu1= calculos [2]
-	let impu2= operacionesimpuesto [1]
-    let impuextra1=calculos[1]
     let impuextra2=operacionesimpuesto[2] 
-	alert(impu1+impu2)
+	let resultadofinalimpu=(document.getElementById("resultado1").value)=impuextra2
 	localStorage.setItem("resultado", impuextra2);
 	let prueba = localStorage.getItem("resultado")
 	console.log(prueba)
-    let seleccion = prompt("¿desea calculcar el impuesto añadido a su objeto?").toUpperCase();
-	while (seleccion != "SI" && seleccion != "NO") {
-	alert("Dato incorrecto, por favor ingrese si o no").toUpperCase();
-}if (seleccion === "SI"){
-  alert(impuextra1+impuextra2);
-}else{
-  stop
-}
+
 }
 function descuento_neto (){
 	let calculos = [
@@ -66,29 +51,18 @@ function descuento_neto (){
 	let datosdescuento = {
 		tipodeoperaciondescu1:"division",
 		tipodeoperaciondescu2:"multiplicacion",
-		descuento1: parseInt(prompt("ingrese el descuento a restar")),
-		descuento2: parseInt(prompt("ingrese el precio de su objeto")),
+		descuento1:parseInt(document.getElementById("calcdesc1").value),
+		descuento2:parseInt(document.getElementById("calcdesc2").value),
 	}
 	let operacionesdescuento = [
 	descuentoR1 = datosdescuento.descuento1 / 100,
 	descuentoR2 = datosdescuento.descuento2 * descuentoR1,
-  descuentoR3 = descuentoR2+datosdescuento.descuento2
+  	descuentoR3 = datosdescuento.descuento1 - descuentoR2
 	];
-	let descu1= calculos [3]
-	let descu2= operacionesdescuento [1]
-  let descuextra1= calculos[0]
+
   let descuextra2=operacionesdescuento[2]
-	alert(descu1+descu2)
+  let resultadofinaldescu=(document.getElementById("resultado2").value)=descuextra2 
 	localStorage.setItem("resultado", descuextra2);
 	let prueba = localStorage.getItem("resultado")
 	console.log(prueba)
-  let seleccion = prompt("¿desea calculcar el impuesto añadido a su objeto?").toUpperCase();
-	while (seleccion != "SI" && seleccion != "NO") {
-	alert("Dato incorrecto, por favor ingrese si o no").toUpperCase();
-
-}if (seleccion === "SI"){
-  alert(descuextra1+descuextra2);
-}else{
-  stop
-}
 }
